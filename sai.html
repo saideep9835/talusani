@@ -1,0 +1,78 @@
+<html>
+<body>
+ <form>
+     First name:<input type="text" id="firstname" placeholder="enter first name"><br><br>
+     lastname:<input type="text" id="lastname" placeholder="enter last name"><br><br>
+     email:<input type="text" id="email" placeholder="enter email"><br><br>
+     course interested:<input type="text" id="course" placeholder="enter course"><br><br>
+     Qualification: <select id="qualification">
+                           <option value="mtech">Mtech</option>
+                           <option value="btech">Btech</option>
+                           <option value="bsc">bsc</option>
+                           <option value="mca">MCA</option>
+                    </select> <br><br>
+    Gender: <input type="radio" name="gender" value="male" checked> male
+            <input type="radio" name="gender" value="female"> female <br><br>
+ 
+
+     
+     <input type="checkbox" id="tandl">I agree with the terms and conditions. 
+     <br>
+     <br>
+     <button onclick="register()">submit</button>
+     <br>
+     <br>
+     <hr>
+     User Details:
+      
+      <p id="first_name"></p>
+      <p id="last_name"></p>
+      <p id="u_email"></p>
+      
+      <p id="qualification_c"></p>
+      <p id="course_interested"></p>
+      <p name="gender_m"></p>
+      
+ </form>
+  <script>
+    
+
+       function register(){
+           event.preventDefault();
+            var firstname=document.getElementById('firstname').value;
+            console.log(firstname);
+            var lastname=document.getElementById('lastname').value;
+            var email=document.getElementById('email').value;
+            var qualification=document.getElementById('qualification').value;
+            var course=document.getElementById('course').value;
+            var gender=document.getElementsByName('gender').value;
+            console.log(gender);
+            
+         
+
+            document.getElementById("first_name").innerHTML=firstname;
+            document.getElementById("last_name").innerHTML=lastname;
+            document.getElementById("u_email").innerHTML=email;
+            document.getElementById("qualification_c").innerHTML=qualification;
+            document.getElementById("course_interested").innerHTML=course;
+            document.getElementsByName("gender_m").innerHTML=gender;
+            
+       }
+  
+  
+  
+  
+  </script>   
+
+
+
+
+
+
+
+
+</body>
+
+
+
+</html>
